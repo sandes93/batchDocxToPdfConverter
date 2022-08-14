@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nativedocuments/docx-wasm": "^2.2.13-1561490777",
     "docx-pdf": "^0.0.1",
     "glob": "^8.0.3",
     "libreoffice-convert": "^1.4.1"

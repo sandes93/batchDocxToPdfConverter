@@ -19,14 +19,14 @@ getDirectories('test', function (err, res) {
   } else {
         console.log(res)
         res.forEach((file) => {
-            if (file.includes("docx")){
-                
-                let filename = file.split('/').pop()
-                const dst =  `Output/${filename}.pdf`;
-                docxConverter(file, dst, (err, result) => {
-                    if (err) console.log(err);
-                    else console.log(result); // writes to file for us
-                });
+            if (file.includes("docx")){    
+              let filenameArr = file.split('/');
+              let filename = `${filenameArr[filenameArr.length-2]}-${filenameArr.pop()}`
+              const dst =  `Output/${filename}.pdf`;
+              docxConverter(file, dst, (err, result) => {
+                  if (err) console.log(err);
+                  else console.log(result); // writes to file for us
+              });
             } 
         })
     }
